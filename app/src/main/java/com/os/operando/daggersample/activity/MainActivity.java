@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.os.operando.daggersample.GetCategoryUseCase;
 import com.os.operando.daggersample.R;
 import com.os.operando.daggersample.databinding.ActivityMainBinding;
 import com.os.operando.daggersample.di.DaggerRepositoryComponent;
@@ -15,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Inject
     CategoryRepository categoryRepository;
+
+    @Inject
+    GetCategoryUseCase useCase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
